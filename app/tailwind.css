@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+  height: 100%;
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+  background: #d1d1d1;
+}
+
+.main-wrapper {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: #00A884;
+    height: 15%;
+    z-index: 0;
+  }
+}
+.main-content{
+  z-index: 1;
+}
+.chat-user{
+  background: #f0f2f5;
+}
+.chat-active{
+  background: #f0f2f5;
+}
+.chat-new-chat-btn{
+  background: #f0f2f5;
+  color: black;
+}
+.chat-input{
+  border-left: 1px solid #f0f2f5;
+}
+.message-item{
+  position: relative;
+}
+
+.message-item--left{
+  &:before{
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 17px solid #e5e7eb;
+  }
+}
+.message-item--right{
+  &:before{
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 17px solid #BBF7D0;
+  }
+}
+.chat-default{
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
